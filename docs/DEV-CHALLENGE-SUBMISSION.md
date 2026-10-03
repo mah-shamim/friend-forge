@@ -12,7 +12,9 @@ FriendForge brings together goals, tasks, private notes, vocabulary practice, AI
 
 The app runs locally at [http://localhost:8080](http://localhost:8080) when started with Docker Compose. The local demo has been opened in a browser, and a test prompt received a response from the local model.
 
-A short browser walkthrough, including a real response from the local model, is available as [friendforge-demo.webm](./friendforge-demo.webm). Upload this video in the DEV editor when publishing the post; the localhost URL is not publicly accessible.
+See the [animated SVG project overview](https://github.com/mah-shamim/friend-forge/blob/master/docs/friendforge-demo.svg) for a quick visual introduction. It illustrates the actual dashboard sections, AI chat, and local Ollama model flow; it is not a recording of the live app.
+
+Watch the actual browser walkthrough, including a real response from the local model: [friendforge-demo.webm](https://raw.githubusercontent.com/mah-shamim/friend-forge/master/docs/friendforge-demo.webm) ([view it in the GitHub repository](https://github.com/mah-shamim/friend-forge/blob/master/docs/friendforge-demo.webm)).
 
 To run it:
 
@@ -22,11 +24,17 @@ To run it:
 4. Download the default model with `docker compose exec ollama ollama pull qwen2.5:3b`.
 5. Open [http://localhost:8080](http://localhost:8080).
 
-This is a local development URL, not a publicly hosted demo. The video file is included in the repository for sharing with the submission.
+The app URL is local development only; use the linked video as the public demo.
 
 ## Code
 
-The source code is available at [github.com/mah-shamim/friend-forge](https://github.com/mah-shamim/friend-forge). The project is licensed under the [MIT License](../LICENSE).
+The source code is available in the [FriendForge AI GitHub repository](https://github.com/mah-shamim/friend-forge). Clone it with:
+
+```bash
+git clone https://github.com/mah-shamim/friend-forge.git
+```
+
+The project is licensed under the [MIT License](https://github.com/mah-shamim/friend-forge/blob/master/LICENSE).
 
 ## How I Built It
 
@@ -60,7 +68,7 @@ No partner prize category has been confirmed. Add the applicable categories here
 
 ### Before publishing
 
-- Upload `docs/friendforge-demo.webm` to the DEV post as its video demo.
+- Embed or link the public video in the DEV post as its demo.
 - Confirm the friend description and that the friend is comfortable being described this way.
 - Add a shareable agent session link, if available.
 - Confirm applicable prize categories and required tags on the challenge page.

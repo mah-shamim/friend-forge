@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1280 720" preserveAspectRatio="xMidYMid meet" role="img" aria-labelledby="title description">
+  <title id="title">FriendForge AI project demo</title>
+  <desc id="description">An animated project-accurate overview of FriendForge: its Bootstrap dashboard, goals, tasks, notes, vocabulary, English practice chat, and the local Ollama model flow.</desc>
+  <defs>
+    <linearGradient id="back" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#10172d"/>
+      <stop offset="1" stop-color="#20294a"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#5eead4"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+    <filter id="shadow" x="-15%" y="-15%" width="130%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#060b18" flood-opacity=".3"/>
+    </filter>
+    <style>
+      text { font-family: Arial, Helvetica, sans-serif; }
+      .muted { fill: #aebbd4; }
+      .soft { fill: #edf3ff; }
+      .screen { animation: screen 12s ease-in-out infinite; }
+      .dash { animation: dash 12s ease-in-out infinite; }
+      .chat { animation: chat 12s ease-in-out infinite; }
+      .request { animation: request 12s ease-in-out infinite; }
+      .answer { animation: answer 12s ease-in-out infinite; }
+      .pulse { animation: pulse 1.7s ease-in-out infinite; }
+      .dot1 { animation: dots 1s ease-in-out infinite; }
+      .dot2 { animation: dots 1s ease-in-out .18s infinite; }
+      .dot3 { animation: dots 1s ease-in-out .36s infinite; }
+      .packet1 { animation: packet 2.6s linear infinite; }
+      .packet2 { animation: packet 2.6s linear 1.3s infinite; }
+      @keyframes screen { 0%,8%,94%,100% { opacity:1 } 13%,89% { opacity:0 } }
+      @keyframes dash { 0%,8%,94%,100% { opacity:1 } 13%,89% { opacity:0 } }
+      @keyframes chat { 0%,8%,94%,100% { opacity:0 } 13%,89% { opacity:1 } }
+      @keyframes request { 0%,23%,92%,100% { opacity:0; transform:translateY(8px) } 28%,89% { opacity:1; transform:translateY(0) } }
+      @keyframes answer { 0%,39%,92%,100% { opacity:0; transform:translateY(8px) } 45%,89% { opacity:1; transform:translateY(0) } }
+      @keyframes pulse { 0%,100% { opacity:.6 } 50% { opacity:1 } }
+      @keyframes dots { 0%,100% { opacity:.3 } 50% { opacity:1 } }
+      @keyframes packet { 0% { transform:translateX(0); opacity:0 } 15% { opacity:1 } 85% { opacity:1 } 100% { transform:translateX(150px); opacity:0 } }
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; }
+      }
+    </style>
+  </defs>
+
+  <rect width="1280" height="720" rx="24" fill="url(#back)"/>
+  <circle cx="1100" cy="140" r="230" fill="#5263d8" opacity=".09"/>
+  <circle cx="1070" cy="160" r="145" fill="#5eead4" opacity=".045"/>
+
+  <g transform="translate(68 54)">
+    <rect width="34" height="34" rx="10" fill="url(#blue)"/>
+    <path d="M9 17c0-5 3.4-8.5 8-8.5 2.6 0 4.9 1.1 6.4 3.1l-3.2 2.5c-.8-1-1.8-1.6-3.1-1.6-2.1 0-3.6 1.8-3.6 4.5s1.5 4.5 3.6 4.5c1.4 0 2.4-.6 3.3-1.7l3.2 2.4c-1.6 2.2-3.8 3.3-6.6 3.3-4.6 0-8-3.5-8-8.5z" fill="#12213b"/>
+    <text x="46" y="23" fill="#f5f7ff" font-size="21" font-weight="700">FriendForge AI</text>
+    <text x="69" y="85" fill="#f5f7ff" font-size="43" font-weight="700">Build for a Friend</text>
+    <text x="70" y="119" fill="#b9c7df" font-size="19">A personal companion for learning, planning</text>
+    <text x="70" y="146" fill="#b9c7df" font-size="19">and private notes — powered by local AI.</text>
+  </g>
+
+  <g transform="translate(70 265)">
+    <rect width="8" height="154" rx="4" fill="url(#blue)"/>
+    <text x="27" y="20" fill="#5eead4" font-size="13" font-weight="700" letter-spacing="1.6">IN THE APP</text>
+    <g transform="translate(28 47)">
+      <circle cx="7" cy="0" r="4" fill="#5eead4"/>
+      <text x="21" y="5" class="soft" font-size="17">Goals and daily tasks</text>
+      <circle cx="7" cy="36" r="4" fill="#5eead4"/>
+      <text x="21" y="41" class="soft" font-size="17">Private notes and vocabulary</text>
+      <circle cx="7" cy="72" r="4" fill="#5eead4"/>
+      <text x="21" y="77" class="soft" font-size="17">English practice chat</text>
+      <circle cx="7" cy="108" r="4" fill="#5eead4"/>
+      <text x="21" y="113" class="soft" font-size="17">AI study-plan generation</text>
+    </g>
+  </g>
+
+  <g transform="translate(70 465)">
+    <rect width="516" height="146" rx="18" fill="#1b2542" stroke="#394869"/>
+    <text x="23" y="31" fill="#dbe8fa" font-size="14" font-weight="700" letter-spacing="1.1">OPEN AI, RUN LOCALLY</text>
+    <text x="23" y="60" class="muted" font-size="13">PHP app</text>
+    <text x="488" y="60" class="muted" font-size="13" text-anchor="end">Ollama · qwen2.5:3b</text>
+    <path d="M29 84h454" stroke="#43516e" stroke-width="2" stroke-dasharray="6 7"/>
+    <circle cx="32" cy="84" r="5" fill="#5eead4" class="packet1"/>
+    <circle cx="32" cy="84" r="5" fill="#60a5fa" class="packet2"/>
+    <text x="23" y="117" fill="#dce7f8" font-size="14">Prompt → local model → response</text>
+    <text x="23" y="136" fill="#98a8c4" font-size="11">No hosted AI API is required for inference.</text>
+  </g>
+
+  <g transform="translate(654 194)" filter="url(#shadow)">
+    <rect width="560" height="407" rx="15" fill="#fff" stroke="#cdd5df"/>
+    <path d="M15 0h530a15 15 0 0 1 15 15v42H0V15A15 15 0 0 1 15 0z" fill="#f8f8f8"/>
+    <text x="25" y="36" fill="#333" font-size="16" font-weight="700">FriendForge AI</text>
+    <text x="236" y="36" fill="#555" font-size="12">Tasks</text>
+    <text x="291" y="36" fill="#555" font-size="12">Notes</text>
+    <text x="343" y="36" fill="#555" font-size="12">Vocabulary</text>
+    <text x="432" y="36" fill="#555" font-size="12">AI Chat</text>
+    <line x1="0" y1="57" x2="560" y2="57" stroke="#e7e7e7"/>
+
+    <g class="dash">
+      <rect x="22" y="77" width="516" height="133" rx="5" fill="#eee"/>
+      <text x="43" y="119" fill="#333" font-size="28" font-weight="700">Build for a Friend</text>
+      <text x="43" y="145" fill="#555" font-size="14">Private local AI companion for learning, planning and personal notes.</text>
+      <rect x="43" y="163" width="130" height="33" rx="4" fill="#337ab7"/>
+      <text x="108" y="184" fill="#fff" font-size="13" text-anchor="middle">Start AI practice</text>
+      <g transform="translate(22 225)">
+        <rect width="120" height="85" rx="4" fill="#fff" stroke="#ddd"/>
+        <text x="18" y="37" fill="#333" font-size="22" font-weight="700">0</text>
+        <text x="18" y="62" fill="#555" font-size="13">Goals</text>
+        <rect x="132" width="120" height="85" rx="4" fill="#fff" stroke="#ddd"/>
+        <text x="150" y="37" fill="#333" font-size="22" font-weight="700">0</text>
+        <text x="150" y="62" fill="#555" font-size="13">Tasks</text>
+        <rect x="264" width="120" height="85" rx="4" fill="#fff" stroke="#ddd"/>
+        <text x="282" y="37" fill="#333" font-size="22" font-weight="700">0</text>
+        <text x="282" y="62" fill="#555" font-size="13">Notes</text>
+        <rect x="396" width="120" height="85" rx="4" fill="#fff" stroke="#ddd"/>
+        <text x="414" y="37" fill="#333" font-size="22" font-weight="700">0</text>
+        <text x="414" y="62" fill="#555" font-size="13">Vocabulary</text>
+      </g>
+      <rect x="22" y="322" width="516" height="43" rx="4" fill="#d9edf7" stroke="#bce8f1"/>
+      <text x="38" y="348" fill="#31708f" font-size="13">Pending tasks: 0 · Model: qwen2.5:3b</text>
+    </g>
+
+    <g class="chat">
+      <text x="27" y="99" fill="#333" font-size="26" font-weight="400">Local AI Chat</text>
+      <g class="request">
+        <text x="28" y="140" fill="#555" font-size="13">What do you want to practice?</text>
+        <rect x="27" y="150" width="506" height="77" rx="4" fill="#fff" stroke="#ccc"/>
+        <text x="42" y="178" fill="#333" font-size="13">Practice a short English interview with me.</text>
+        <rect x="27" y="239" width="121" height="34" rx="4" fill="#337ab7"/>
+        <text x="87" y="261" fill="#fff" font-size="13" text-anchor="middle">Ask local AI</text>
+      </g>
+      <g class="answer">
+        <rect x="27" y="290" width="506" height="72" rx="4" fill="#dff0d8" stroke="#d6e9c6"/>
+        <text x="43" y="314" fill="#3c763d" font-size="13" font-weight="700">Local model response</text>
+        <text x="43" y="341" fill="#333" font-size="14">Of course! Tell me about a skill you’re proud of.</text>
+      </g>
+      <g transform="translate(30 383)">
+        <circle cx="0" cy="0" r="3" fill="#337ab7" class="dot1"/>
+        <circle cx="11" cy="0" r="3" fill="#337ab7" class="dot2"/>
+        <circle cx="22" cy="0" r="3" fill="#337ab7" class="dot3"/>
+        <text x="34" y="4" fill="#777" font-size="11">Chat response shown as a project illustration</text>
+      </g>
+    </g>
+  </g>
+
+  <text x="68" y="676" fill="#7180a0" font-size="12" letter-spacing="1">PHP 5.6  ·  MYSQL 5.7  ·  DOCKER COMPOSE  ·  OLLAMA</text>
+  <text x="1210" y="676" fill="#7180a0" font-size="12" text-anchor="end">PROJECT OVERVIEW · ANIMATED SVG</text>
+</svg>

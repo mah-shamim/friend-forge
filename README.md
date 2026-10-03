@@ -1,6 +1,12 @@
 # FriendForge AI — Build for a Friend
 
+[![FriendForge AI animated project overview](docs/friendforge-demo.svg)](https://github.com/mah-shamim/friend-forge/blob/master/docs/friendforge-demo.svg)
+
 A privacy-first personal AI companion built around **PHP 5.6 + Docker + MySQL + Ollama/open-weight AI**.
+
+**GitHub repository:** [mah-shamim/friend-forge](https://github.com/mah-shamim/friend-forge)
+
+**License:** [MIT License](https://github.com/mah-shamim/friend-forge/blob/master/LICENSE)
 
 ## The friend problem
 
@@ -31,6 +37,14 @@ This is especially useful for personal data: the friend controls the computer, d
 - Docker Compose
 
 > PHP 5.6 is end-of-life. This project intentionally targets PHP 5.6 for the requested learning/legacy-compatible environment. Do not expose it directly to the public Internet without a hardened reverse proxy and additional security work.
+
+## Demo
+
+The animated project overview shows the dashboard, AI chat, and local Ollama model flow:
+
+[![FriendForge AI animated project overview](docs/friendforge-demo.svg)](https://github.com/mah-shamim/friend-forge/blob/master/docs/friendforge-demo.svg)
+
+This SVG is an illustration of the project, not a screen recording. The [browser walkthrough video](https://raw.githubusercontent.com/mah-shamim/friend-forge/master/docs/friendforge-demo.webm) shows the running app and a real local-model response.
 
 ## Quick start
 
