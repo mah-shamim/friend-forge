@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+  app:
+    build: ./docker/php56
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/var/www/html
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - ollama
+    networks: [friendforge]
+
+  db:
+    image: mysql:5.7
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: friendforge
+      MYSQL_USER: friendforge
+      MYSQL_PASSWORD: friendforge
+      MYSQL_ROOT_PASSWORD: change-me-root
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./app/database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    networks: [friendforge]
+
+  ollama:
+    image: ollama/ollama:latest
+    restart: unless-stopped
+    volumes:
+      - ollama_data:/root/.ollama
+    networks: [friendforge]
+
+networks:
+  friendforge:
+
+volumes:
+  mysql_data:
+  ollama_data:

@@ -1,0 +1,1 @@
+<?php require __DIR__.'/../config/bootstrap.php'; header('Content-Type: application/json'); try { $data=$ai->tags(); echo json_encode(array('ok'=>true,'ollama'=>$data,'model'=>$config['ollama_model'])); } catch(Exception $e){ http_response_code(503); echo json_encode(array('ok'=>false,'error'=>$e->getMessage())); }
